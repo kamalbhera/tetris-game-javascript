@@ -1,0 +1,212 @@
+@import url('https://fonts.cdnfonts.com/css/tetris');
+
+body {
+  padding-top: 2%;
+	background-color: lightsteelblue;
+	text-align: center;
+	font-family: 'Tetris', sans-serif;
+  pointer-events: none;
+}
+
+b {
+  font-size: 30px;
+}
+
+/* HEADER */
+.title {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.title-text {
+	margin: 0;
+	font-size: 70px;
+	font-weight: 600;
+}
+
+#logo {
+	width: 50px;
+	height: 50px;
+}
+
+.description {
+	margin: 0 0 20px 0;
+	font-size: 35px;
+}
+
+/* LEFT SIDE */
+.score-board {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: right;
+}
+
+table th,
+table td {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+table td {
+  width: 70px;
+}
+
+/* MAIN CONTAINER */
+#main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+#mainContainer {
+  border: 10px solid grey;
+  border-radius: 0.6vh;
+  opacity: 0.4;
+  transition: 0.7s all ease;
+}
+
+.row {
+  display: flex;
+}
+
+/* theme */
+.cell {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.small-cell {
+  width: 14px;
+  height: 14px;
+}
+
+.empty-cell {
+  background-color: black;
+}
+
+.tetris-cell {
+  border: 1px solid rgb(2, 83, 2);
+}
+
+/* GAME OVER SCREEN */
+#gameOverScreen,
+#startScreen {
+  position: absolute;
+  top: 40%;
+  display: none;
+  border-radius: 4px;
+}
+
+#gameOverScreen > h1 {
+  font-weight: 600;
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+#gameOverScreen > h2 {
+  display: none;
+  margin: 0;
+}
+
+#startScreen {
+  top: 43%;
+}
+
+.small {
+  display: none;
+}
+
+#startScreen {
+  color: white;
+  font-weight: 600;
+  font-size: small;
+}
+
+/* RIGHT SIDE */
+.right-side-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.speed-wrapper p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.speed-wrapper label {
+  position: absolute;
+  left: 23px;
+  top: 50px;
+  font-size: 20px;
+  writing-mode: vertical-lr;
+}
+
+#speedInput {
+  width: 30px;
+  outline: none;
+  appearance: slider-vertical;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.next-element-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin-left: 35px;
+}
+
+.tetris-cell-next {
+  background-color: black;
+  border: 1px solid lightsteelblue;
+}
+
+.empty-cell-next {
+  background-color: lightsteelblue;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+    pointer-events: auto;
+  }
+
+  .large {
+    display: none;
+  }
+
+  .small {
+    display: block;
+  }
+
+  #logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .title-text {
+    font-size: 45px;
+  }
+
+  .description {
+    margin-bottom: 8px;
+    font-size: 22px;
+  }
+
+  .score-board,
+  .right-side-wrapper {
+    display: none;
+  }
+
+  #gameOverScreen > h2 {
+    display: block;
+  }
+}

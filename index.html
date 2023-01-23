@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./src/assets/styles/style.css">
+	<link rel="shortcut icon" href="./src/assets/images/logo.png" type="image/x-icon">
+	<link href="https://fonts.cdnfonts.com/css/tetris" rel="stylesheet">
+	<title>TETRIS</title>
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="header">
+		<div class="title">
+			<img src="./src/assets/images/logo.png" alt="Tetris logo" id="logo">
+			<h1 class="title-text">TETRIS</h1>
+		</div>
+		<p class="description">Kolyo's edition</p>
+	</header>
+	<!-- MAIN CONTAINER -->
+	<main id="main">
+		<!-- left side / score board -->
+    <div class="score-board">
+      <b>SCORE</b>
+      <table>
+        <tr>
+          <th>current score:</th>
+          <td id="currentScore">0</td>
+        </tr>
+        <tr>
+          <th>current best:</th>
+          <td id="currentBest">0</td>
+        </tr>
+        <tr>
+          <th>user's best:</th>
+          <td id="userBest">0</td>
+        </tr>
+      </table>
+    </div>
+		<!-- Tetris game field -->
+		<div id="mainContainer"></div>
+		<div id="gameOverScreen">
+			<h1>GAME OVER</h1>
+      <h2>score: <span id="currentScoreMobile"></span></h2>
+		</div>
+		<div id="startScreen">
+      <div class="large">
+        <h1>press SPACE to start</h1>
+        <h1>or ESC to reset</h1>
+      </div>
+      <div class="small">
+        <h1>click HERE to start</h1>
+        <h1>or LOGO to reset</h1>
+      </div>
+		</div>
+		<!-- ride side / speed / next element window -->
+		<div class="right-side-wrapper">
+			<div class="speed-wrapper">
+				<p>100</p>
+				<input type="range" id="speedInput" name="speedInput" value="0">
+				<label for="speedInput">speed</label>
+				<p>0</p>
+			</div>
+			<div class="next-element-wrapper">
+				<b>NEXT</b>
+				<div id="nextElementWindow"></div>
+			</div>
+		</div>
+	</main>
+
+	<!-- JAVASCRIPT -->
+	<script src="./src/js/figures.js"></script>
+	<script src="./src/js/utils.js"></script>
+	<script src="./src/js/constants.js"></script>
+	<script src="./src/js/model.js"></script>
+	<script src="./src/js/controller.js"></script>
+</body>
+</html>

@@ -1,7 +1,6 @@
-# TETRIS - Kolyo's edition
+# TETRIS - 
 
 ## My version of Tetris game
-### Link to hosted project: [TETRIS - Kolyo's edition](https://iliev-nikola.github.io/tetris/)
 
 ### Technologies:
 
